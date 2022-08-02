@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B13 Cinema</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <i class="uil uil-ticket"></i>Cinema
+        </a>
+         <div class="uil uil-bars" id="menu-icon"></div>
+
+         <ul class="navbar">
+            <li><a href="#home"></a>Home</li>
+            <li><a href="#about"></a>About</li>
+            <li><a href="#movies"></a>Movies/TV</li>
+            <li><a href="#services"></a>Services</li>
+            <li><a href="#downloads"></a>Downloads</li>
+            <li><a href="#contact us"></a>Contact Us</li>
+         </ul>
+         <li onclick="signupToggle()">
+            <a href="#" class="btn">SignUp</a>
+         </li>
+         <li onclick="loginToggle()">
+            <a href="#" class="btn">Login</a>
+         </li>
+        
+    </header>
+
+    <div class="signup-form">
+        <div class="form">
+            <div class="close" onclick="signupToggle()">&times;</div>
+            <div class="text">
+                <h1>Register Now!</h1>
+            </div>
+            <form action="#">
+                <div class="row">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                    <input type="text" placeholder="Email ID">
+                    <input type="text" placeholder="Password">
+                    <input type="text" placeholder="Confirm Password">
+                    <input type="submit" value="Register"> 
+            </form>
+        </div>
+    </div>
+    <div class="login-form">
+        <div class="form">
+            <div class="close" onclick="loginToggle()">&times;</div>
+            <div class="text">
+                <h1>Login</h1>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="Email ID">
+                <input type="text" placeholder="Password">
+                <input type="submit" value="Login"> 
+            </form>
+        </div>
+    </div>
+     <!--Home-->
+     <section class="home swiper" id="home">
+     <div class="swiper-wrapper">
+        <div class="swiper-slide container">
+            <img src="img/thor.png"  alt="">
+            <div class="home-text">
+                <span>Marvel Cinematic Universe</span>
+                <h1>Thor: Love and <br>Thunder</h1>
+                <a href="#" class="btn">Watch Now!</a>
+                <a href="#" class="play">
+                    <i class="uil uil-play"></i>
+                </a>
+                
+            </div>
+        </div>
+          <!-- Box 2 -->
+        <div class="swiper-slide container">
+            <img src="img/home2.jpg"  alt="">
+            <div class="home-text">
+                <span>Action Movies</span>
+                <h1>The Round Up</h1>
+                <a href="#" class="btn">Watch Now!</a>
+                <a href="#" class="play">
+                    <i class="uil uil-play"></i>
+                </a>
+                
+            </div>
+        </div>
+         <!-- Box 3 -->
+         <div class="swiper-slide container">
+            <img src="img/home3.jpg"  alt="">
+            <div class="home-text">
+                <span>Action Movies</span>
+                <h1>Doctor Strange: <br>Multiverse of Madness</h1>
+                <a href="#" class="btn">Watch Now!</a>
+                <a href="#" class="play">
+                    <i class="uil uil-play"></i>
+                </a>
+                
+            </div>
+        </div>
+        </div>
+      
+
+        
+        
+      
+      <div class="swiper-pagination"></div>
+
+    </section>
+     <!--movies-->
+
+     <section class="movies" id="movies">
+        <h2 class="heading">Watch Now!</h2>
+    <!--Movies Container-->
+    <div class="movies-container">
+        <!--Box 1-->
+        <div class="box">
+        <div class="box-img">  
+            <img src="./img/new.jpg" alt="">
+        </div>
+        <h3>The Gray Man</h3>
+        <span>120 min | Action</span>
+    </div>
+     <!--Box 2-->
+     <div class="box">
+        <div class="box-img">
+            <img src="./img/home2.jpg" alt="">
+        </div>
+        <h3>The Round Up</h3>
+        <span>137 min | Action</span>
+    </div>
+      <!--Box 3-->
+      <div class="box">
+        <div class="box-img">
+            <img src="./img/home3.jpg" alt="">
+        </div>
+        <h3>Doctor Strange: Mulitiverse of Madness</h3>
+        <span>157 min | Fantasy/Action</span>
+    </div>
+     <!--Box 4-->
+     <div class="box">
+        <div class="box-img">
+            <img src="./img/m4.jpg" alt="">
+        </div>
+        <h3>John Wick 2</h3>
+        <span>157 min | Action</span>
+    </div>
+    <!--Box 5-->
+    <div class="box">
+        <div class="box-img">
+            <img src="./img/m5.jpg" alt="">
+        </div>
+        <h3>Aquaman</h3>
+        <span>160 min | Action</span>
+    </div>
+     <!--Box 6-->
+     <div class="box">
+        <div class="box-img">
+            <img src="./img/m6.jpg" alt="">
+        </div>
+        <h3>Black Panther</h3>
+        <span>120 min | Thriller</span>
+    </div>
+    <!--Box 7-->
+    <div class="box">
+        <div class="box-img">
+            <img src="./img/m7.jpg" alt="">
+        </div>
+        <h3>Thor</h3>
+        <span>120 min | Adventure/MCU</span>
+    </div>
+     <!--Box 8-->
+     <div class="box">
+        <div class="box-img">
+            <img src="./img/m8.png" alt="">
+        </div>
+        <h3>Bumblebee</h3>
+        <span>132 min | Adventure/Action</span>
+    </div>
+    <!--Box 9-->
+    <div class="box">
+        <div class="box-img">
+            <img src="./img/m9.jpg" alt="">
+        </div>
+        <h3>Mortal Engines</h3>
+        <span>120 min | Adventure/Action</span>
+    </div>
+     <!--Box 10-->
+     <div class="box">
+        <div class="box-img">
+            <img src="./img/m10.jpg" alt="">
+        </div>
+        <h3>Underworld Blood Wars</h3>
+        <span>140 min | Adventure/Action</span>
+    </div>
+    </div>
+     </section>
+
+     <!--Coming-->
+
+     <section class="coming" id="coming">
+        <h2 class="heading">Coming Soon</h2>
+        <!--Coming Container-->
+        <div class="coming-container swiper">
+            <div class="swiper-wrapper">
+                 <!--Box 1-->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming1.jpg" alt="">
+            </div>
+            <h3>Johnny English</h3>
+            <span>120 min | Action</span>
+        </div>
+         <!--Box 2-->
+         <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming2.jpg" alt="">
+            </div>
+            <h3>Warcraft</h3>
+            <span>137 min | Action</span>
+        </div>
+          <!--Box 3-->
+          <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming3.jpg" alt="">
+            </div>
+            <h3>Rampage</h3>
+            <span>157 min | Fantasy/Action</span>
+        </div>
+         <!--Box 4-->
+         <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming4.jpg" alt="">
+            </div>
+            <h3>The Iron Lady</h3>
+            <span>157 min | Action</span>
+        </div>
+        <!--Box 5-->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming5.jpg" alt="">
+            </div>
+            <h3>Justice League</h3>
+            <span>160 min | Action</span>
+        </div>
+         <!--Box 6-->
+         <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming6.jpeg" alt="">
+            </div>
+            <h3>Doctor Strange</h3>
+            <span>120 min | Thriller</span>
+        </div>
+        <!--Box 7-->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming7.jpg" alt="">
+            </div>
+            <h3>Captain Marvel</h3>
+            <span>120 min | Adventure/MCU</span>
+        </div>
+         <!--Box 8-->
+         <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming8.jpg" alt="">
+            </div>
+            <h3>Black Widow</h3>
+            <span>132 min | Adventure/Action</span>
+        </div>
+        <!--Box 9-->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming9.jpg" alt="">
+            </div>
+            <h3>Ant-Man</h3>
+            <span>120 min | Adventure/Action</span>
+        </div>
+         <!--Box 10-->
+         <div class="swiper-slide box">
+            <div class="box-img">
+                <img src="./img/coming10.jpg" alt="">
+            </div>
+            <h3>Guardians of the Galaxy Vol.1</h3>
+            <span>140 min | Adventure/Action</span>
+        </div>
+        </div>
+      </div>
+        
+        </div>
+     </section>
+
+     <!--NewsLetter-->
+
+     <section class="newsletter" id="newsletter">
+        <h2>Subscribe to Get <br>Newsletter</h2>
+        <form action="">
+            <input type="email" class="email" placeholder="Enter Email..." required>
+            <input type="submit" value="Subscribe" class="btn">
+        </form>
+     </section>
+     
+     <!--Footer-->
+    
+     <section class="footer">
+        <a href="#" class="logo">
+            <i class="uil uil-ticket"></i>B13 Cinema
+        </a>
+        <div class="social">
+            <a href="#"><i class="uil uil-facebook-f"></i></a>
+            <a href="#"> <i class="uil uil-twitter"></i></a>
+            <a href="#"><i class="uil uil-instagram"></i></a>
+            <a href="#"><i class="uil uil-github"></i></a>
+        </div>
+     </section>
+
+      <!--Copyright-->
+
+      <div class="copyright">
+        <p>&#169 B13 Cinema All Rights Reserved</p>
+      </div>
+
+
+    <!--Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    
+
+     <!--Link to Custom JS -->
+     <script src="main.js"></script>
+
+
+
+
+
+
+</body>
+</html>
