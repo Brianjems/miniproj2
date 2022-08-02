@@ -7,9 +7,11 @@
     <title>B13 Cinema</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="./index.css">
+    
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <header>
@@ -26,12 +28,19 @@
             <li><a href="#downloads"></a>Downloads</li>
             <li><a href="#contact us"></a>Contact Us</li>
          </ul>
-         <li onclick="signupToggle()">
+         <li id="btnsignup" onclick="signupToggle()">
             <a href="#" class="btn">SignUp</a>
          </li>
-         <li onclick="loginToggle()">
+         <li id="btnlogin" onclick="loginToggle()">
             <a href="#" class="btn">Login</a>
          </li>
+         <li id="btnDisplayUser" >
+            <a href="#" id="displayUser" ></a>
+         </li>
+         <li id="btnlogout" >
+            <a href="#"  class="btn">logout</a>
+         </li>
+        
         
     </header>
 
@@ -41,27 +50,27 @@
             <div class="text">
                 <h1>Register Now!</h1>
             </div>
-            <form action="#">
+            <form id="signupForm">
                 <div class="row">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+                    <input type="text" id="txtFirstName" placeholder="First Name">
+                    <input type="text" id="txtLastName" placeholder="Last Name">
                 </div>
-                    <input type="text" placeholder="Email ID">
-                    <input type="text" placeholder="Password">
-                    <input type="text" placeholder="Confirm Password">
+                    <input type="email" id="txtEmailAddress" placeholder="Email ID">
+                    <input type="password" id="txtPassword" placeholder="Password">
+                    <input type="password" id="txtConfirmPassword" placeholder="Confirm Password">
                     <input type="submit" value="Register"> 
             </form>
         </div>
     </div>
-    <div class="login-form">
+    <div id="divLogin" class="login-form">
         <div class="form">
             <div class="close" onclick="loginToggle()">&times;</div>
             <div class="text">
                 <h1>Login</h1>
             </div>
-            <form action="#">
-                <input type="text" placeholder="Email ID">
-                <input type="text" placeholder="Password">
+            <form id="login">
+                <input id="txtLoginEmail" type="text" placeholder="Email ID">
+                <input id="txtLoginPassword" type="password" placeholder="Password">
                 <input type="submit" value="Login"> 
             </form>
         </div>
@@ -337,7 +346,7 @@
      <!--Link to Custom JS -->
      <script src="main.js"></script>
 
-
+     <script src="index.js"></script>
 
 
 
