@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoviePlayer</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./movie.css">
+    
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/mooviejs/css/moovie.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <i class="uil uil-ticket"></i>Cinema
+        </a>
+         <div class="uil uil-bars" id="menu-icon"></div>
+
+         <ul class="navbar">
+            <li><a href="#home"></a>Home</li>
+            <li><a href="#about"></a>About</li>
+            <li><a href="#movies"></a>Movies/TV</li>
+            <li><a href="#services"></a>Services</li>
+            <li><a href="#downloads"></a>Downloads</li>
+            <li><a href="#contact us"></a>Contact Us</li>
+         </ul>
+         <li id="btnsignup" onclick="signupToggle()">
+            <a href="#" class="btn">SignUp</a>
+         </li>
+         <li id="btnlogin" onclick="loginToggle()">
+            <a href="#" class="btn">Login</a>
+         </li>
+         <li id="btnDisplayUser" >
+            <a href="#" id="displayUser" ></a>
+         </li>
+         <li id="btnlogout" >
+            <a href="#"  class="btn">logout</a>
+         </li>
+        
+        
+    </header>
+
+    <div class="signup-form">
+        <div class="form">
+            <div class="close" onclick="signupToggle()">&times;</div>
+            <div class="text">
+                <h1>Register Now!</h1>
+            </div>
+            <form id="signupForm">
+                <div class="row">
+                    <input type="text" id="txtFirstName" placeholder="First Name">
+                    <input type="text" id="txtLastName" placeholder="Last Name">
+                </div>
+                    <input type="email" id="txtEmailAddress" placeholder="Email ID">
+                    <input type="password" id="txtPassword" placeholder="Password">
+                    <input type="password" id="txtConfirmPassword" placeholder="Confirm Password">
+                    <input type="submit" value="Register"> 
+            </form>
+        </div>
+    </div>
+    <div id="divLogin" class="login-form">
+        <div class="form">
+            <div class="close" onclick="loginToggle()">&times;</div>
+            <div class="text">
+                <h1>Login</h1>
+            </div>
+            <form id="login">
+                <input id="txtLoginEmail" type="text" placeholder="Email ID">
+                <input id="txtLoginPassword" type="password" placeholder="Password">
+                <input type="submit" value="Login"> 
+            </form>
+        </div>
+    </div>
+
+    <video id="example1" poster="./poster/thorposter.jpg" controls>
+        <source src="./Video/Thortrailer.mp4">
+        <track kind="captions" label="English" srclang="en" src="https://cdn.jsdelivr.net/gh/BMSVieira/moovie.js@main/demo-template/subtitles/en.vtt">
+        Your browser does not support the video tag.
+      </video>
+
+
+
+      <!--videocdn -->
+      <script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/mooviejs/js/moovie.min.js"></script>
+
+     <!--Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    
+
+     <!--Link to Custom JS -->
+     <script src="main.js"></script>
+
+     <script src="index.js"></script>
+
+     <script src="movie.js"></script>
+    
+</body>
+</html>

@@ -33,6 +33,8 @@ $(document).ready(function(){
         let popup = document.querySelector('.login-form');
         popup.classList.toggle('active');
     }
+    
+   
    
     $('#btnlogout').on('click',function(e){
         console.log('logout');
