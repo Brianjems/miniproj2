@@ -4,16 +4,35 @@ $(document).ready(function(){
     function checkLogin(){
 
         var UserLogin =localStorage.getItem('UserLogin');
+
+        var UserInfo = JSON.parse(UserLogin);
+
         var divLogin = $("#divLogin").attr("class");
-     
-       
         if(UserLogin != null){
-            var UserInfo = JSON.parse(UserLogin);
             $('#displayUser').text("Welcome:"+UserInfo.FirstName);
             document.getElementById('btnsignup').style.display = "none";
             document.getElementById('btnlogin').style.display = "none";
             document.getElementById('btnlogout').style.display = "block";
+           
+            if(UserInfo.IsSubscribe == false || !UserInfo.IsSubscribe ){
+                if(IsDocumentExists("btnSubscribe") == true){
+                    document.getElementById('btnSubscribe').style.display = "block";
+                }
+               
+            }
+            else{
+                if(IsDocumentExists("btnSubscribe") == true){
+                    document.getElementById('btnSubscribe').style.display = "none";
+                }
+                if(IsDocumentExists("btnDownload")== true){
+                    document.getElementById('btnDownload').style.display = "block";
+                }
+               
+               
+            }
+           
             document.getElementById('btnDisplayUser').style.display = "block";
+    
             if(divLogin.includes('active')){
                 popupLogin();
             }
@@ -22,10 +41,23 @@ $(document).ready(function(){
             document.getElementById('btnsignup').style.display = "block";
             document.getElementById('btnlogin').style.display = "block";
             document.getElementById('btnlogout').style.display = "none";
+            document.getElementById('btnSubscribe').style.display = "none";
             document.getElementById('btnDisplayUser').style.display = "none";
            
         }
     }
+
+    function IsDocumentExists(Id){
+        if(document.getElementById(Id) === null || 
+         document.getElementById(Id) === undefined) {
+    return false;
+   }
+   else{
+    return true;
+   }
+    }
+
+
 
     function popupLogin(){
         let container = document.querySelector('.container');
@@ -34,6 +66,17 @@ $(document).ready(function(){
         popup.classList.toggle('active');
     }
     
+    function Subscribe(){
+        var UserLogin =localStorage.getItem('UserLogin');
+        var UserInfo = JSON.parse(UserLogin);
+        var Id = UserInfo.Id;
+        UserInfo.IsSubscribe = true;
+        var jsonStringData = JSON.stringify(UserInfo);
+        localStorage.removeItem(Id);
+        localStorage.setItem(Id,jsonStringData);
+        localStorage.removeItem('UserLogin');
+        localStorage.setItem('UserLogin',jsonStringData);
+    }
    
    
     $('#btnlogout').on('click',function(e){
@@ -42,6 +85,11 @@ $(document).ready(function(){
         checkLogin();
     })
    
+    $('#btnSubscribe').on('click',function(e){
+        Subscribe();
+        checkLogin();
+
+    });
 
     $('#signupForm').on('submit',function(e){
 
@@ -56,6 +104,7 @@ $(document).ready(function(){
                 LastName:$('#txtLastName').val(),
                 Email:$('#txtEmailAddress').val(),
                 Password:$('#txtPassword').val(),
+                IsSubscribe:false
                }
 
             var jsonStringData = JSON.stringify(data);
