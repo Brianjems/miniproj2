@@ -43,6 +43,9 @@ html::-webkit-scrollbar-thumb {
      opacity: 0;
 
 }
+.regbtn{
+    cursor: pointer;
+}
 .form {
     width: 500px;
     padding: 20px 50px;
