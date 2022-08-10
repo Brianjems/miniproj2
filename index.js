@@ -1,12 +1,10 @@
 $(document).ready(function(){
-    checkLogin();
+    
+     LoadHeader();
 
     function checkLogin(){
-
         var UserLogin =localStorage.getItem('UserLogin');
-
         var UserInfo = JSON.parse(UserLogin);
-
         var divLogin = $("#divLogin").attr("class");
         if(UserLogin != null){
             $('#displayUser').text("Welcome:"+UserInfo.FirstName);
@@ -47,11 +45,15 @@ $(document).ready(function(){
         }
     }
 
+    function LoadHeader(){
+        $("#header").load("header.html");
+    }
+   
     function IsDocumentExists(Id){
         if(document.getElementById(Id) === null || 
          document.getElementById(Id) === undefined) {
     return false;
-   }
+         }
    else{
     return true;
    }
